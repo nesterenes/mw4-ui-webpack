@@ -12,9 +12,10 @@ import './style.scss';
 
 import mainModule from './app/main/main.module';
 import settingsModule from './app/settings/settings.module';
+import './app/settings/prototype.controller.js';
 import homeModule from './app/home/home.module';
 
-angular.module("app", [uiRouter.default, ngAnimate, ngAria, ngMaterial, hmTouchEvents, mainModule, settingsModule, homeModule]);
+angular.module("app", [uiRouter.default, ngAnimate, ngAria, ngMaterial, hmTouchEvents, mainModule, settingsModule, homeModule, mindwireAdmin]);
 angular.module("app").config(routes);
 
 angular.module("app").config(["$mdThemingProvider", function ($mdThemingProvider) {
