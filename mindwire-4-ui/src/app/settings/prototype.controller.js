@@ -1,24 +1,23 @@
-(function () {
-  'use strict';
+import angular from 'angular';
 
-  angular
-    .module('mindwireAdmin')
-    .controller('prototypeController', prototypeController);
+angular
+  .module('settingsModule')
+  .controller('prototypeController', prototypeController);
 
-    prototypeController.$inject = [];
+  prototypeController.$inject = [];
 
-  /* @ngInject */
-  function prototypeController() {
-    var vm = this;
+/* @ngInject */
+function prototypeController() {
+  var vm = this;
 
-    console.info('Prototype Test');
+  console.info('Prototype Test');
 
-    ////////////////
+  ////////////////
 
-    function TODO(model) {
-      console.info('TODO Test');
-    }
-
+  function TODO(model) {
+    console.info('TODO Test');
   }
 
-})();
+}
+
+

@@ -9,13 +9,19 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, './dist'),
 		filename: 'app.bundle.js'
+	},	
+	resolve: { 
+        // Add '.ts' and '.tsx' as resolvable extensions.
+        extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]	
 	},
-	resolve: { extensions: ['.ts', '.js'] },
-	//devtool: 'source-map',
+	devtool: 'source-map',
 
 	module: {
 		rules: [
-			{ test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+			{ 
+				// All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.			
+				test: /\.tsx?$/, loader: 'awesome-typescript-loader' 
+			},
 			{
 				test: /\.html$/,
 				use: [

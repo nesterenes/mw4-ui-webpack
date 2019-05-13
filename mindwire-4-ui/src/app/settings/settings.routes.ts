@@ -4,7 +4,6 @@ export function routes($urlRouterProvider, $stateProvider) {
     .state({ name: 'moresettings', url: '/moresettings', component: 'moresettings' })
     .state('prototype', {
         url: '/prototype',
-
         templateUrl: './app/settings/prototype.html',
         controller: 'prototypeController as vm'
     })
